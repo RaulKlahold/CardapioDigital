@@ -5,10 +5,11 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
-@Setter
-@Getter
+
 @Table(name = "foods")
 @Entity(name = "foods")
+@Setter
+@Getter
 public class Food {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
