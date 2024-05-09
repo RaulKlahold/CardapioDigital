@@ -19,8 +19,16 @@ public class FoodController {
     @Autowired
     private FoodRepository repository;
 
+    public FoodRepository getRepository() {
+        return repository;
+    }
+
+    public void setRepository(FoodRepository repository) {
+        this.repository = repository;
+    }
+
     @GetMapping
-    public List<Food> getAll(){
+    public List<FoodResponseDTO> getAll(){
 
         List<Food> foodList = repository.findAll();
         return foodList;
