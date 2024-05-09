@@ -2,12 +2,14 @@ package com.example.cardapio.food;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 
 @Table(name = "foods")
 @Entity(name = "foods")
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode(of = "id")
 
 public class Food {
 
@@ -52,7 +54,6 @@ public class Food {
         this.price = price;
     }
 
-    public Food() {
-    }
+
 
 }
