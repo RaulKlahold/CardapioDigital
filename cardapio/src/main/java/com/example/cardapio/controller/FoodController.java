@@ -2,6 +2,7 @@ package com.example.cardapio.controller;
 
 import com.example.cardapio.food.Food;
 import com.example.cardapio.food.FoodRepository;
+import com.example.cardapio.food.FoodRequestDTO;
 import com.example.cardapio.food.FoodResponseDTO;
 import lombok.Getter;
 import lombok.Setter;
@@ -20,6 +21,9 @@ public class FoodController {
 
     @PostMapping
     public void saveFood(@RequestBody FoodRequestDTO data){
+        Food foodData = new Food(data);
+        repository.save(foodData);
+        return;
 
     }
 
